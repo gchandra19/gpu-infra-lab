@@ -40,7 +40,7 @@ Session 2026-10-04, GKE `1.35.8-gke.1225000`, Terraform 1.16.5, NVIDIA driver 58
 | Idle GPU node → removed by autoscaler | about 2 min after it went empty (`OPTIMIZE_UTILIZATION`) |
 | BF16 matmul throughput on L4 (N=8192, 300s) | **53.6 TFLOPS mean**, 59.0 peak, falling to about 51 as it heats up ([gpu-load.log](results/gpu-load.log)) |
 | Spot preemptions | **1** of 2 GPU node runs, about 2 min in, during the image pull |
-| `terraform destroy` | DESTROY_TIME |
+| `terraform destroy` | **8m56s** (system pool drain 4m21s, then the control plane 4m32s); leftover check clean |
 | Spot `g2-standard-4` hourly cost (billing) | _pending; billing data lags about 24h_ |
 | Total session cost | _pending_ (see [cost log](../../docs/cost-log.md)) |
 
