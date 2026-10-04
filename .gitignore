@@ -1,0 +1,24 @@
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+*.tfplan
+
+# Credentials
+kubeconfig
+*.kubeconfig
+*-key.json
+
+# Model weights / large artifacts
+*.safetensors
+*.bin
+*.pt
+*.gguf
+models/
+checkpoints/
+
+__pycache__/
+.venv/

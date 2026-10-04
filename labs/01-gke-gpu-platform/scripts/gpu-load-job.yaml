@@ -1,0 +1,37 @@
+# Runs gpu-load.py (mounted from ConfigMap gpu-load, created by `make load`).
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: gpu-load
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 600
+  template:
+    metadata:
+      labels:
+        app: gpu-load
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        cloud.google.com/gke-accelerator: nvidia-l4
+      containers:
+        - name: load
+          image: pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
+          command: ["python", "/app/gpu-load.py"]
+          env:
+            - name: DURATION_S
+              value: "300"
+            - name: MATRIX_N
+              value: "8192"
+            - name: HOLD_GIB
+              value: "8"
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+          volumeMounts:
+            - name: app
+              mountPath: /app
+      volumes:
+        - name: app
+          configMap:
+            name: gpu-load

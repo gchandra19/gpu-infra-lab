@@ -1,0 +1,31 @@
+device=NVIDIA L4 torch=2.5.1+cu124 cuda=12.4
+t=    10s    59.0 TFLOPS  mem_alloc=8.4 GiB
+t=    20s    58.0 TFLOPS  mem_alloc=8.4 GiB
+t=    30s    57.4 TFLOPS  mem_alloc=8.4 GiB
+t=    40s    56.8 TFLOPS  mem_alloc=8.4 GiB
+t=    51s    56.1 TFLOPS  mem_alloc=8.4 GiB
+t=    61s    55.6 TFLOPS  mem_alloc=8.4 GiB
+t=    71s    55.2 TFLOPS  mem_alloc=8.4 GiB
+t=    81s    55.0 TFLOPS  mem_alloc=8.4 GiB
+t=    91s    55.0 TFLOPS  mem_alloc=8.4 GiB
+t=   101s    54.9 TFLOPS  mem_alloc=8.4 GiB
+t=   111s    54.3 TFLOPS  mem_alloc=8.4 GiB
+t=   121s    53.9 TFLOPS  mem_alloc=8.4 GiB
+t=   131s    53.5 TFLOPS  mem_alloc=8.4 GiB
+t=   141s    53.2 TFLOPS  mem_alloc=8.4 GiB
+t=   152s    52.9 TFLOPS  mem_alloc=8.4 GiB
+t=   162s    52.7 TFLOPS  mem_alloc=8.4 GiB
+t=   172s    52.4 TFLOPS  mem_alloc=8.4 GiB
+t=   182s    52.3 TFLOPS  mem_alloc=8.4 GiB
+t=   192s    52.1 TFLOPS  mem_alloc=8.4 GiB
+t=   202s    52.0 TFLOPS  mem_alloc=8.4 GiB
+t=   212s    51.9 TFLOPS  mem_alloc=8.4 GiB
+t=   222s    51.7 TFLOPS  mem_alloc=8.4 GiB
+t=   232s    51.6 TFLOPS  mem_alloc=8.4 GiB
+t=   242s    51.3 TFLOPS  mem_alloc=8.4 GiB
+t=   253s    51.1 TFLOPS  mem_alloc=8.4 GiB
+t=   263s    51.0 TFLOPS  mem_alloc=8.4 GiB
+t=   273s    51.1 TFLOPS  mem_alloc=8.4 GiB
+t=   283s    51.2 TFLOPS  mem_alloc=8.4 GiB
+t=   293s    51.3 TFLOPS  mem_alloc=8.4 GiB
+SUMMARY {"device": "NVIDIA L4", "matrix_n": 8192, "dtype": "bf16", "duration_s": 300.0, "iterations": 14610, "tflops_mean": 53.6, "tflops_max": 59.0, "max_mem_allocated_gib": 8.51}

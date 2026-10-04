@@ -1,0 +1,19 @@
+# Requests one GPU and runs nvidia-smi. With the L4 pool at 0 nodes, this pod
+# stays Pending until the cluster autoscaler brings a GPU node up.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gpu-smoke-test
+  labels:
+    app: gpu-smoke-test
+spec:
+  restartPolicy: Never
+  nodeSelector:
+    cloud.google.com/gke-accelerator: nvidia-l4
+  containers:
+    - name: nvidia-smi
+      image: nvidia/cuda:12.4.1-base-ubuntu22.04
+      command: ["nvidia-smi"]
+      resources:
+        limits:
+          nvidia.com/gpu: 1

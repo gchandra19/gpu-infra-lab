@@ -1,0 +1,2 @@
+run_utc,node,machine,spot,node_created_s,node_ready_s,pod_scheduled_s,container_started_s,phase
+2026-10-04T20:09:02+00:00,gke-gpu-lab-l4-spot-c44b226c-sr99,g2-standard-4,true,33,35,85,90,Succeeded
